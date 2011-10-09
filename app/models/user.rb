@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
   include Clearance::User
+
+  has_many :user_group_memberships
+  has_many :user_groups, :through => :user_group_memberships
+
   validates_presence_of   :login, :unless => "email.present?"
   validates_uniqueness_of :login, :allow_blank => true
 
