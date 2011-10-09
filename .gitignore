@@ -8,3 +8,4 @@ tmp/
 # User Specific
 .rvmrc
 Procfile
+*.rdb
