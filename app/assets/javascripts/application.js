@@ -6,4 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require backbone-rails
+//= require handlebars
+//= require_self
 //= require_tree .
