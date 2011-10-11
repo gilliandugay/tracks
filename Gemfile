@@ -10,6 +10,7 @@ gem 'pg'
 gem 'redis'
 gem 'redis-store'
 gem 'clearance'
+gem 'acts_as_list'
 
 # Gems used only for assets and not required
 # in production environments by default.
