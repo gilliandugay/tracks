@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+tms:
+  prefix: TMS
+  title: New project
+  description: A brand new project to test.
+
+telco:
+  prefix: TELCO
+  title: Another new project
+  description: Another brand new project to test.

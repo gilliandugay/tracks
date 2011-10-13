@@ -11,13 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111011130215) do
+ActiveRecord::Schema.define(:version => 20111012063824) do
 
   create_table "ideas", :force => true do |t|
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "project_memberships", :force => true do |t|
+    t.integer "project_id"
+    t.integer "user_id"
+  end
+
+  create_table "projects", :force => true do |t|
+    t.string   "prefix"
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "projects", ["prefix"], :name => "index_projects_on_prefix"
 
   create_table "ticket_relations", :force => true do |t|
     t.integer "ticket_id"
@@ -32,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20111011130215) do
     t.integer  "time_estimate"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "project_id"
   end
 
   add_index "tickets", ["code"], :name => "index_tickets_on_code"
