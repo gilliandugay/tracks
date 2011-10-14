@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 
   has_many   :user_group_memberships
   has_many   :user_groups, :through => :user_group_memberships
+  has_many   :comments
   belongs_to :project
 
   validates_presence_of   :login, :unless => "email.present?"

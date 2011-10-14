@@ -1,6 +1,7 @@
 class Ticket < ActiveRecord::Base
   has_many   :ticket_relations
   has_many   :tickets, :through => :ticket_relations, :uniq => true
+  has_many   :comments, :order => 'created_at DESC'
   belongs_to :project
 
   validates_uniqueness_of :code
