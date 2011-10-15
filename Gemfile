@@ -20,11 +20,12 @@ group :assets do
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
   gem 'yui-compressor'
+  gem 'haml'
+  gem 'jquery-rails'
+  gem 'backbone-rails'
+  gem 'handlebars_assets'
 end
 
-gem 'jquery-rails'
-gem 'backbone-rails'
-gem 'handlebars_assets'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -36,7 +37,7 @@ gem 'handlebars_assets'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test do
   # Pretty printed test output

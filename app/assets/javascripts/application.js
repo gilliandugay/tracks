@@ -10,3 +10,4 @@
 //= require handlebars
 //= require_self
 //= require_tree .
+//= require_tree ../templates

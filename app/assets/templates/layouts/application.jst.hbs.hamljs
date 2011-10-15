@@ -1,0 +1,8 @@
+%header
+#center
+  %section#ticketing_queue
+    %ol#ticket_list
+  %section#main
+%footer#express_line
+  %form#concierge
+  %ul#bookmarks
