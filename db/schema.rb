@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111013160839) do
+ActiveRecord::Schema.define(:version => 20111015065807) do
 
   create_table "comments", :force => true do |t|
     t.text     "body"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20111013160839) do
 
   create_table "project_memberships", :force => true do |t|
     t.integer "project_id"
-    t.integer "user_id"
+    t.integer "user_group_id"
   end
 
   create_table "projects", :force => true do |t|

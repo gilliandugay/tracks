@@ -52,6 +52,16 @@ Tracks::Application.routes.draw do
 
   # See how all your routes lay out with "rake routes"
 
+  resources :users, :controller => 'users', :only => [:create, :update] do
+    member do
+      get '/', :action => 'fetch'
+    end
+
+    resource :password,
+      :controller => 'clearance/passwords',
+      :only       => [:create, :edit, :update]
+  end
+
   root :to => 'session#index'
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

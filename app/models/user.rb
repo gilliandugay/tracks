@@ -4,9 +4,7 @@ class User < ActiveRecord::Base
   has_many   :user_group_memberships
   has_many   :user_groups, :through => :user_group_memberships
   has_many   :comments
-  belongs_to :project
 
-  validates_presence_of   :login, :unless => "email.present?"
   validates_uniqueness_of :login, :allow_blank => true
 
   class << self
@@ -16,10 +14,7 @@ class User < ActiveRecord::Base
     end
   end
 
-  protected
-
-  # override
-  def email_optional?
-    login.present?
+  def as_json(options={})
+    super :only => [:id, :login, :email, :name, :created_at]
   end
 end

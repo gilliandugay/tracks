@@ -1,7 +1,7 @@
 class Project < ActiveRecord::Base
   has_many :tickets
   has_many :project_memberships
-  has_many :members, :through => :project_memberships, :uniq => true, :class_name => 'User'
+  has_many :user_groups, :through => :project_memberships, :uniq => true
 
   validates_uniqueness_of :prefix, :title
   validates_presence_of   :prefix, :title
